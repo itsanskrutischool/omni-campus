@@ -174,6 +174,7 @@ export class QuizService {
     const question = await prisma.question.create({
       data: {
         quizId,
+        tenantId,
         type: payload.type,
         text: payload.text,
         imageUrl: payload.imageUrl,

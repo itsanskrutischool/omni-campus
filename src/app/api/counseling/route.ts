@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from "next/server"
-import { getServerSession } from "next-auth"
-import { authOptions } from "@/lib/auth"
 import { CounselingService } from "@/services/counseling.service"
 import { requireAuth, requireRole } from "@/lib/api-middleware"
 

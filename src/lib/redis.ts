@@ -5,19 +5,19 @@
  * Falls back to in-memory cache if Redis is not configured.
  */
 
-import { Redis } from "@upstash/redis"
-
 // Initialize Redis client (optional)
-let redis: Redis | null = null
+let redis: any = null
 
-if (process.env.REDIS_URL) {
-  try {
+try {
+  if (process.env.REDIS_URL) {
+    const { Redis } = require("@upstash/redis")
     redis = new Redis({
       url: process.env.REDIS_URL,
     })
-  } catch (error) {
-    console.warn("Redis initialization failed, falling back to in-memory cache:", error)
   }
+} catch (error) {
+  // Redis not installed or not configured, use in-memory cache
+  console.log("Redis not available, using in-memory cache")
 }
 
 // In-memory cache fallback
@@ -34,8 +34,8 @@ export async function cacheGet<T>(key: string): Promise<T | null> {
   // Try Redis first
   if (redis) {
     try {
-      const value = await redis.get<T>(key)
-      return value
+      const value = await redis.get(key)
+      return value as T
     } catch (error) {
       console.warn("Redis get failed, falling back to memory:", error)
     }

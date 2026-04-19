@@ -16,11 +16,14 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: "Tenant ID required" }, { status: 400 })
     }
 
+    const status = searchParams.get("status")
+    const routeId = searchParams.get("routeId")
+    
     const buses = await prisma.bus.findMany({
       where: {
         tenantId,
-        ...(searchParams.get("status") && { status: searchParams.get("status") }),
-        ...(searchParams.get("routeId") && { routeId: searchParams.get("routeId") }),
+        ...(status && { status }),
+        ...(routeId && { routeId }),
       },
       include: {
         route: true,

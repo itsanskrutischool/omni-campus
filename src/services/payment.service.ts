@@ -65,19 +65,13 @@ export class PaymentService {
       })
 
       // Store order in database
-      await prisma.auditLog.create({
-        data: {
-          tenantId,
-          action: "CREATE",
-          module: "fees",
-          entityType: "PaymentOrder",
-          entityId: order.id,
-          summary: `Payment order created for fee ${feeRecordId}`,
-          details: JSON.stringify({
-            amount,
-            orderId: order.id,
-          }),
-        },
+      await AuditService.log({
+        tenantId,
+        action: "CREATE",
+        module: "fees",
+        entityType: "PaymentOrder",
+        entityId: order.id,
+        summary: `Payment order created for fee ${feeRecordId}`,
       })
 
       return {
@@ -131,11 +125,6 @@ export class PaymentService {
           entityType: "FeeRecord",
           entityId: feeRecordId,
           summary: `Fee payment completed (DEMO MODE)`,
-          details: JSON.stringify({
-            amount: amountPaid,
-            paymentId: verification.razorpay_payment_id,
-            method: "ONLINE",
-          }),
         })
 
         return {
@@ -193,11 +182,6 @@ export class PaymentService {
         entityType: "FeeRecord",
         entityId: feeRecordId,
         summary: `Fee payment verified and recorded`,
-        details: JSON.stringify({
-          amount: payment.amount / 100,
-          paymentId: payment.id,
-          method: payment.method,
-        }),
       })
 
       return {
@@ -236,8 +220,7 @@ export class PaymentService {
 
     return payments.filter((p) => {
       try {
-        const details = JSON.parse(p.details || "{}")
-        return details.paymentId || details.method === "ONLINE"
+        return p.summary.includes("payment") || p.summary.includes("ONLINE")
       } catch {
         return false
       }
@@ -328,10 +311,6 @@ export class PaymentService {
         entityType: "Refund",
         entityId: refund.id,
         summary: `Refund processed for payment ${paymentId}`,
-        details: JSON.stringify({
-          amount: refund.amount / 100,
-          reason,
-        }),
       })
 
       return {

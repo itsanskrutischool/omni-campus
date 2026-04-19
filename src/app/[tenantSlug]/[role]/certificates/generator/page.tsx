@@ -336,7 +336,7 @@ export default function CertificatesGeneratorPage() {
                           <div className={`p-3 rounded-lg ${
                             cert.status === "ISSUED" ? "bg-emerald-100 text-emerald-600" : "bg-amber-100 text-amber-600"
                           }`}>
-                            <TypeIcon className="w-6 h-6" />
+                            {TypeIcon && <TypeIcon className="w-6 h-6" />}
                           </div>
                           <div>
                             <h3 className="font-semibold text-gray-900">{cert.studentName}</h3>
