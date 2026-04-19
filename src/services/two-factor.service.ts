@@ -1,4 +1,4 @@
-import { authenticator } from "otplib"
+import { authenticator } from "otplib/authenticator"
 import { prisma } from "@/lib/prisma"
 import { AuditService } from "./audit.service"
 
