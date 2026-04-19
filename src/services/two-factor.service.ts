@@ -1,4 +1,4 @@
-import { authenticator } from "otplib/authenticator"
+const { authenticator } = require("otplib")
 import { prisma } from "@/lib/prisma"
 import { AuditService } from "./audit.service"
 
