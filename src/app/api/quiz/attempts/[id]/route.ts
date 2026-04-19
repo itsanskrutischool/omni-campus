@@ -5,12 +5,13 @@ import { requireAuth } from "@/lib/api-middleware"
 // PATCH /api/quiz/attempts/[id] - Save answer or submit
 export async function PATCH(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const auth = await requireAuth(req)
   if (auth instanceof NextResponse) return auth
 
   try {
+    const { id } = await params
     const body = await req.json()
     const tenantId = body.tenantId || auth.user.tenants[0]?.id
     
@@ -21,7 +22,7 @@ export async function PATCH(
     if (body.action === "save-answer") {
       const result = await QuizService.saveAnswer(
         tenantId,
-        params.id,
+        id,
         body.questionId,
         body.answer
       )
@@ -29,7 +30,7 @@ export async function PATCH(
     }
 
     if (body.action === "submit") {
-      const result = await QuizService.submitAttempt(tenantId, params.id, body.timeSpent || 0)
+      const result = await QuizService.submitAttempt(tenantId, id, body.timeSpent || 0)
       return NextResponse.json(result)
     }
 
@@ -46,7 +47,7 @@ export async function PATCH(
 // GET /api/quiz/attempts/[id] - Get attempt details
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const auth = await requireAuth(req)
   if (auth instanceof NextResponse) return auth

@@ -6,12 +6,13 @@ import { prisma } from "@/lib/prisma"
 // POST /api/quiz/[id]/attempts - Start quiz attempt
 export async function POST(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const auth = await requireAuth(req)
   if (auth instanceof NextResponse) return auth
 
   try {
+    const { id } = await params
     const body = await req.json()
     const tenantId = body.tenantId || auth.user.tenants[0]?.id
     
@@ -19,7 +20,7 @@ export async function POST(
       return NextResponse.json({ error: "Tenant ID required" }, { status: 400 })
     }
 
-    const attempt = await QuizService.startAttempt(tenantId, params.id, body.studentId)
+    const attempt = await QuizService.startAttempt(tenantId, id, body.studentId)
     return NextResponse.json(attempt, { status: 201 })
   } catch (error) {
     console.error("[QUIZ_ATTEMPT_POST_ERROR]", error)
@@ -33,12 +34,13 @@ export async function POST(
 // GET /api/quiz/[id]/attempts - Get quiz attempts
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const auth = await requireAuth(req)
   if (auth instanceof NextResponse) return auth
 
   try {
+    const { id } = await params
     const { searchParams } = new URL(req.url)
     const tenantId = searchParams.get("tenantId") || auth.user.tenants[0]?.id
     
@@ -48,7 +50,7 @@ export async function GET(
 
     const attempts = await prisma.quizAttempt.findMany({
       where: {
-        quizId: params.id,
+        quizId: id,
         tenantId,
       },
       include: {

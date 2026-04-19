@@ -5,12 +5,13 @@ import { requireAuth } from "@/lib/api-middleware"
 // GET /api/quiz/[id]/questions - Get quiz questions
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const auth = await requireAuth(req)
   if (auth instanceof NextResponse) return auth
 
   try {
+    const { id } = await params
     const { searchParams } = new URL(req.url)
     const tenantId = searchParams.get("tenantId") || auth.user.tenants[0]?.id
     
@@ -18,8 +19,8 @@ export async function GET(
       return NextResponse.json({ error: "Tenant ID required" }, { status: 400 })
     }
 
-    const quiz = await QuizService.getQuiz(tenantId, params.id, true)
-    return NextResponse.json(quiz.questions || [])
+    const quiz = await QuizService.getQuiz(tenantId, id, true)
+    return NextResponse.json(quiz?.questions || [])
   } catch (error) {
     console.error("[QUIZ_QUESTIONS_GET_ERROR]", error)
     return NextResponse.json(
@@ -32,12 +33,13 @@ export async function GET(
 // POST /api/quiz/[id]/questions - Add question to quiz
 export async function POST(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const auth = await requireAuth(req)
   if (auth instanceof NextResponse) return auth
 
   try {
+    const { id } = await params
     const body = await req.json()
     const tenantId = body.tenantId || auth.user.tenants[0]?.id
     
@@ -45,7 +47,7 @@ export async function POST(
       return NextResponse.json({ error: "Tenant ID required" }, { status: 400 })
     }
 
-    const question = await QuizService.addQuestion(tenantId, auth.user.id, params.id, {
+    const question = await QuizService.addQuestion(tenantId, auth.user.id, id, {
       type: body.type,
       text: body.text,
       imageUrl: body.imageUrl,
