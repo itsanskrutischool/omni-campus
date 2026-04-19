@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma"
+import { SMSService } from "@/services/sms.service"
 import { WhatsAppService } from "@/services/whatsapp.service"
 import { AIDefaultersService } from "@/services/ai-defaulters.service"
 import { AuditService } from "@/services/audit.service"
@@ -46,9 +47,8 @@ export class CronJobs {
         if (parentPhone) {
           // Send SMS reminder
           try {
-            // await SMSService.sendSMS(tenantId, undefined, { to: parentPhone, body: `Fee reminder: ${amount} due on ${dueDate} for ${studentName}` })
-            // remindersSent++
-            console.log("SMS disabled for fee reminders")
+            await SMSService.sendSMS(tenantId, undefined, { to: parentPhone, body: `Fee reminder: ${amount} due on ${dueDate} for ${studentName}` })
+            remindersSent++
           } catch (error) {
             console.error("SMS reminder failed:", error)
           }
@@ -124,9 +124,8 @@ export class CronJobs {
         if (parentPhone) {
           // Send SMS alert
           try {
-            // await SMSService.sendSMS(tenantId, undefined, { to: parentPhone, body: `Attendance alert: ${studentName} was absent on ${date}` })
-            // alertsSent++
-            console.log("SMS disabled for attendance alerts")
+            await SMSService.sendSMS(tenantId, undefined, { to: parentPhone, body: `Attendance alert: ${studentName} was absent on ${date}` })
+            alertsSent++
           } catch (error) {
             console.error("SMS alert failed:", error)
           }
@@ -213,9 +212,8 @@ export class CronJobs {
         if (parentPhone) {
           // Send SMS notification
           try {
-            // await SMSService.sendSMS(tenantId, undefined, { to: parentPhone, body: `Exam result: ${student.name} scored ${totalMarks}/${maxMarks} in ${examName}` })
-            // notificationsSent++
-            console.log("SMS disabled for exam notifications")
+            await SMSService.sendSMS(tenantId, undefined, { to: parentPhone, body: `Exam result: ${student.name} scored ${totalMarks}/${maxMarks} in ${examName}` })
+            notificationsSent++
           } catch (error) {
             console.error("SMS notification failed:", error)
           }
