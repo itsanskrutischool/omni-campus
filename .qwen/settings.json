@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npx *)",
+      "Bash(findstr *)",
+      "Bash(powershell *)",
+      "Bash(dir *)",
+      "Bash(mkdir *)"
+    ]
+  },
+  "$version": 3
+}
