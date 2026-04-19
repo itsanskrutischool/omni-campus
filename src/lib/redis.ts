@@ -23,6 +23,65 @@ try {
 // In-memory cache fallback
 const memoryCache = new Map<string, { value: any; expiry: number }>()
 
+// Helper functions
+export function getRedis() {
+  return redis
+}
+
+export async function redisSet(key: string, value: string, ttl?: number) {
+  if (!redis) return false
+  try {
+    if (ttl) {
+      await redis.set(key, value, { ex: ttl })
+    } else {
+      await redis.set(key, value)
+    }
+    return true
+  } catch (error) {
+    return false
+  }
+}
+
+export async function redisGet(key: string) {
+  if (!redis) return null
+  try {
+    return await redis.get(key)
+  } catch (error) {
+    return null
+  }
+}
+
+export async function redisDelete(key: string) {
+  if (!redis) return false
+  try {
+    await redis.del(key)
+    return true
+  } catch (error) {
+    return false
+  }
+}
+
+export function memorySet(key: string, value: string, ttlSeconds: number) {
+  memoryCache.set(key, {
+    value,
+    expiry: Date.now() + ttlSeconds * 1000,
+  })
+}
+
+export function memoryGet(key: string) {
+  const item = memoryCache.get(key)
+  if (!item) return null
+  if (item.expiry < Date.now()) {
+    memoryCache.delete(key)
+    return null
+  }
+  return item.value
+}
+
+export function memoryDelete(key: string) {
+  memoryCache.delete(key)
+}
+
 export interface CacheOptions {
   ttl?: number // Time to live in seconds (default: 300 = 5 minutes)
 }
@@ -60,47 +119,40 @@ export async function cacheGet<T>(key: string): Promise<T | null> {
  */
 export async function cacheSet<T>(key: string, value: T, options: CacheOptions = {}): Promise<void> {
   const ttl = options.ttl || 300 // Default 5 minutes
-  const expiry = Date.now() + ttl * 1000
 
   // Try Redis first
-  if (redis) {
-    try {
-      await redis.set(key, value, { ex: ttl })
-      return
-    } catch (error) {
-      console.warn("Redis set failed, falling back to memory:", error)
-    }
+  if (await redisSet(key, JSON.stringify(value), ttl)) {
+    return
   }
 
   // Fallback to memory cache
-  memoryCache.set(key, { value, expiry })
+  memorySet(key, JSON.stringify(value), ttl)
 }
 
 /**
  * Delete a value from cache
  */
 export async function cacheDelete(key: string): Promise<void> {
-  if (redis) {
-    try {
-      await redis.del(key)
-      return
-    } catch (error) {
-      console.warn("Redis delete failed:", error)
-    }
+  // Try Redis first
+  if (await redisDelete(key)) {
+    return
   }
 
-  memoryCache.delete(key)
+  // Fallback to memory cache
+  memoryDelete(key)
 }
 
 /**
  * Clear all cache entries matching a pattern
  */
 export async function cacheClear(pattern: string): Promise<void> {
-  if (redis) {
+  // Try Redis first
+  const client = getRedis()
+  if (client) {
     try {
-      const keys = await redis.keys(pattern)
+      const keys = await client.keys(pattern)
       if (keys.length > 0) {
-        await redis.del(...keys)
+        await client.del(...keys)
       }
       return
     } catch (error) {

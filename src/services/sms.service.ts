@@ -1,7 +1,20 @@
 import { prisma } from "@/lib/prisma"
 import { AuditService } from "./audit.service"
+import twilio from "twilio"
 
 export class SMSService {
+  private static getClient() {
+    const accountSid = process.env.TWILIO_ACCOUNT_SID
+    const authToken = process.env.TWILIO_AUTH_TOKEN
+    const fromNumber = process.env.TWILIO_PHONE_NUMBER
+
+    if (!accountSid || !authToken || !fromNumber) {
+      return null
+    }
+
+    return twilio(accountSid, authToken)
+  }
+
   // ─── Send Single SMS ─────────────────────────────────────
 
   static async sendSMS(tenantId: string, userId: string | undefined, data: {
@@ -10,21 +23,45 @@ export class SMSService {
     template?: string
     variables?: Record<string, string>
   }) {
-    // TODO: Integrate with actual SMS provider (Twilio, etc.)
-    // For now, just log the SMS
-    console.log(`[SMS] To: ${data.to}, Body: ${data.body}`)
+    const client = this.getClient()
+    const fromNumber = process.env.TWILIO_PHONE_NUMBER
 
-    await AuditService.log({
-      tenantId,
-      userId,
-      action: "CREATE",
-      module: "communication",
-      entityType: "SMS",
-      entityId: data.to,
-      summary: `SMS sent to ${data.to}`,
-    })
+    if (!client || !fromNumber) {
+      console.log(`[SMS - LOG ONLY] To: ${data.to}, Body: ${data.body}`)
+      await AuditService.log({
+        tenantId,
+        userId,
+        action: "CREATE",
+        module: "communication",
+        entityType: "SMS",
+        entityId: data.to,
+        summary: `SMS sent to ${data.to} (log mode - no Twilio config)`,
+      })
+      return { success: true, messageId: `sms_${Date.now()}`, mode: "log" }
+    }
 
-    return { success: true, messageId: `sms_${Date.now()}` }
+    try {
+      const message = await client.messages.create({
+        body: data.body,
+        from: fromNumber,
+        to: data.to,
+      })
+
+      await AuditService.log({
+        tenantId,
+        userId,
+        action: "CREATE",
+        module: "communication",
+        entityType: "SMS",
+        entityId: message.sid,
+        summary: `SMS sent to ${data.to} via Twilio`,
+      })
+
+      return { success: true, messageId: message.sid, mode: "twilio" }
+    } catch (error: any) {
+      console.error("[SMS Twilio Error]", error)
+      throw new Error(`SMS failed: ${error.message}`)
+    }
   }
 
   // ─── Send Bulk SMS ───────────────────────────────────────
