@@ -22,10 +22,17 @@ type CreateStudentInput = {
   religion?: string
   aadhaar?: string
   pen?: string
+  profileImage?: string
+  email?: string
   fatherName: string
+  fatherPhone?: string
+  fatherOccupation?: string
   motherName: string
+  motherPhone?: string
+  motherOccupation?: string
   guardianName?: string
   guardianPhone?: string
+  guardianRelation?: string
   phone: string
   emergencyContact?: string
   classRoomId?: string
@@ -33,6 +40,9 @@ type CreateStudentInput = {
   previousSchool?: string
   admissionStatus?: string
   address?: string
+  city?: string
+  state?: string
+  pincode?: string
   notes?: string
 }
 
@@ -183,10 +193,17 @@ export async function createStudent(input: CreateStudentInput) {
       religion: input.religion || null,
       aadhaar: input.aadhaar || null,
       pen: input.pen || null,
+      profileImage: input.profileImage || null,
+      email: input.email || null,
       fatherName: input.fatherName.trim(),
+      fatherPhone: input.fatherPhone || null,
+      fatherOccupation: input.fatherOccupation || null,
       motherName: input.motherName.trim(),
+      motherPhone: input.motherPhone || null,
+      motherOccupation: input.motherOccupation || null,
       guardianName: input.guardianName || null,
       guardianPhone: input.guardianPhone || null,
+      guardianRelation: input.guardianRelation || null,
       phone: input.phone.trim(),
       emergencyContact: input.emergencyContact || null,
       classRoomId: input.classRoomId || null,
@@ -194,6 +211,9 @@ export async function createStudent(input: CreateStudentInput) {
       previousSchool: input.previousSchool || null,
       admissionStatus: input.admissionStatus || "ADMITTED",
       address: input.address || null,
+      city: input.city || null,
+      state: input.state || null,
+      pincode: input.pincode || null,
       notes: input.notes || null,
     },
     include: {

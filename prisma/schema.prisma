@@ -77,6 +77,7 @@ model Tenant {
   scholarships       Scholarship[]
   scholarshipApps    ScholarshipApplication[]
   staff              Staff[]
+  streams            Stream[]
   stockAdjustments   StockAdjustment[]
   stockBalances      StockBalance[]
   stockCategories    StockCategory[]
@@ -150,22 +151,35 @@ model ClassRoom {
   name         String
   numeric      Int
   tenantId     String
+  createdAt    DateTime               @default(now())
+  updatedAt    DateTime               @default(now())
   applications AdmissionApplication[]
   tenant       Tenant                 @relation(fields: [tenantId], references: [id])
   enquiries    Enquiry[]
   lessonPlans  LessonPlan[]
   quizzes      Quiz[]
   sections     Section[]
+  streams      Stream[]
   students     Student[]
   subjects     Subject[]
+
+  @@index([tenantId])
+  @@index([numeric])
 }
 
 model Section {
   id          String    @id @default(cuid())
   name        String
   classRoomId String
+  streamId    String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @default(now())
   classRoom   ClassRoom @relation(fields: [classRoomId], references: [id])
+  stream      Stream?   @relation(fields: [streamId], references: [id])
   students    Student[]
+
+  @@index([classRoomId])
+  @@index([streamId])
 }
 
 model Subject {
@@ -182,6 +196,23 @@ model Subject {
   tenant      Tenant       @relation(fields: [tenantId], references: [id])
 }
 
+model Stream {
+  id          String    @id @default(cuid())
+  name        String
+  code        String?
+  description String?
+  classRoomId String
+  tenantId    String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @default(now())
+  classRoom   ClassRoom @relation(fields: [classRoomId], references: [id])
+  sections    Section[]
+  tenant      Tenant    @relation(fields: [tenantId], references: [id])
+
+  @@index([tenantId])
+  @@index([classRoomId])
+}
+
 model Student {
   id                 String                   @id @default(cuid())
   admissionNumber    String                   @unique
@@ -195,12 +226,21 @@ model Student {
   category           String                   @default("GENERAL")
   religion           String?
   profileImage       String?
+  email              String?
   fatherName         String
+  fatherPhone        String?
+  fatherOccupation   String?
   motherName         String
+  motherPhone        String?
+  motherOccupation   String?
   guardianName       String?
   guardianPhone      String?
+  guardianRelation   String?
   phone              String
   address            String?
+  city               String?
+  state              String?
+  pincode            String?
   emergencyContact   String?
   previousSchool     String?
   admissionDate      DateTime                 @default(now())
@@ -232,6 +272,11 @@ model Student {
   section            Section?                 @relation(fields: [sectionId], references: [id])
   tenant             Tenant                   @relation(fields: [tenantId], references: [id])
   documents          StudentDocument[]
+
+  @@index([tenantId])
+  @@index([classRoomId])
+  @@index([sectionId])
+  @@index([status])
 }
 
 model StudentDocument {

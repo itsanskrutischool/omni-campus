@@ -49,6 +49,7 @@ interface Student {
   fatherName: string
   status: string
   admissionStatus: string
+  profileImage?: string | null
   classroom?: { name: string } | null
   section?: { name: string } | null
 }
@@ -220,7 +221,11 @@ export function StudentList({ tenantSlug, role }: StudentListProps) {
                           onClick={(e) => e.stopPropagation()}
                         >
                           <div className="w-12 h-12 rounded-2xl bg-muted border border-white/10 flex items-center justify-center shadow-inner group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 overflow-hidden">
-                            <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${stu.id}`} className="w-full h-full object-cover p-1" alt={stu.name} />
+                            {stu.profileImage ? (
+                              <img src={stu.profileImage} className="w-full h-full object-cover" alt={stu.name} />
+                            ) : (
+                              <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${stu.id}`} className="w-full h-full object-cover p-1" alt={stu.name} />
+                            )}
                           </div>
                           <div>
                             <p className="font-black text-foreground text-base tracking-tight leading-none mb-1 group-hover:text-indigo-600 transition-colors uppercase">{stu.name}</p>

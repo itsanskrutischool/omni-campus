@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Student, ClassRoom, Section, FeeRecord, AttendanceRecord, StudentDocument, Batch, FeeStructure, MarkEntry, Exam, Subject } from "@prisma/client"
 import { VibrantCard } from "@/components/ui/vibrant-card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -103,15 +104,16 @@ export function StudentProfile({ student, tenantSlug, role }: StudentProfileProp
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Button
-                    type="button"
-                    variant="outline"
-                    disabled
-                    className="rounded-xl font-bold bg-background/50 hover:bg-background"
-                  >
-                    <Edit className="h-4 w-4 mr-2" />
-                    Edit Coming Soon
-                  </Button>
+                  <Link href={`/${tenantSlug}/${role}/students/${student.id}/edit`}>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      className="rounded-xl font-bold bg-background/50 hover:bg-violet-50 hover:text-violet-600 hover:border-violet-200 transition-all"
+                    >
+                      <Edit className="h-4 w-4 mr-2" />
+                      Edit Profile
+                    </Button>
+                  </Link>
                   <Dialog>
                     <DialogTrigger render={<Button variant="outline" className="rounded-xl font-bold bg-background/50 hover:bg-background text-amber-600 hover:text-amber-700 hover:bg-amber-50" />}>
                       <ArrowRightLeft className="h-4 w-4 mr-2" />

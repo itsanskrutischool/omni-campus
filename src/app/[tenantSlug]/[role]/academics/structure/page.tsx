@@ -22,6 +22,7 @@ import {
   Zap,
   FileSpreadsheet,
   GitBranchPlus,
+  Settings2,
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button, buttonVariants } from "@/components/ui/button"
@@ -189,7 +190,25 @@ export default function AcademicStructurePage() {
         <StatCard label="Active Ratio" value={programs.length > 0 ? `${(batches.length / programs.length).toFixed(1)}x` : "0x"} icon={Zap} variant="blue" index={2} description="Batches per program average" />
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-3">
+        <Card className="rounded-[2rem] border-violet-500/10">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3 text-xl font-black">
+              <Settings2 className="h-5 w-5 text-violet-600" />
+              Manage Structure
+            </CardTitle>
+            <CardDescription>
+              Full admin control to create, edit, and delete Classes, Streams, and Sections.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Link href={`/${tenantSlug}/${params.role as string}/academics/structure/manage`} className={buttonVariants({ className: "rounded-2xl font-black w-full" })}>
+              <Settings2 className="h-4 w-4 mr-2" />
+              Open Management
+            </Link>
+          </CardContent>
+        </Card>
+
         <Card className="rounded-[2rem] border-violet-500/10">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-xl font-black">
@@ -201,7 +220,7 @@ export default function AcademicStructurePage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Link href={`/${tenantSlug}/${params.role as string}/academics/structure/classes`} className={buttonVariants({ className: "rounded-2xl font-black" })}>
+            <Link href={`/${tenantSlug}/${params.role as string}/academics/structure/classes`} className={buttonVariants({ variant: "outline", className: "rounded-2xl font-black w-full" })}>
               Open Class Operations
             </Link>
           </CardContent>
