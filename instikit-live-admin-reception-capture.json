@@ -1,0 +1,2100 @@
+{
+  "generatedAt": "2026-05-01T20:30:51.222Z",
+  "baseUrl": "https://demo.instikit.com",
+  "login": {
+    "loginUrl": "https://demo.instikit.com/app/login",
+    "usernameUsed": "admin",
+    "successLikely": true,
+    "finalUrlAfterLogin": "https://demo.instikit.com/app/home",
+    "homeTitle": "InstiKit School ERP"
+  },
+  "reception": {
+    "routeCount": 57,
+    "capturedCount": 57,
+    "summary": {
+      "uniqueHeadings": [
+        "Add Enquiry Stage",
+        "Add Enquiry Type",
+        "Add Enquiry Source",
+        "Add Visiting Purpose",
+        "Add Gate Pass Purpose",
+        "Add Complaint Type",
+        "Add Calling Purpose",
+        "Page not found!",
+        "Config",
+        "Enquiry Stage",
+        "Enquiry Type",
+        "Enquiry Source",
+        "Sign In"
+      ],
+      "uniqueLabels": [
+        "Name",
+        "Color",
+        "Description",
+        "Keep Adding",
+        "Enquiry Number Prefix",
+        "Enquiry Number Digit",
+        "Enquiry Number Suffix",
+        "Visitor Log Number Prefix",
+        "Visitor Log Number Digit",
+        "Visitor Log Number Suffix",
+        "Gate Pass Number Prefix",
+        "Gate Pass Number Digit",
+        "Gate Pass Number Suffix",
+        "Complaint Number Prefix",
+        "Complaint Number Digit",
+        "Complaint Number Suffix",
+        "Query Number Prefix",
+        "Query Number Digit",
+        "Query Number Suffix",
+        "Email or Username",
+        "Password",
+        "Remember Me"
+      ],
+      "uniqueButtons": [
+        "Pinned Sidebar",
+        "Open Mobile Sidebar",
+        "Open options",
+        "List all Enquiry Stage",
+        "Reset",
+        "Cancel",
+        "Save",
+        "List all Enquiry Type",
+        "List all Enquiry Source",
+        "List all Visiting Purpose",
+        "List all Gate Pass Purpose",
+        "List all Complaint Type",
+        "List all Calling Purpose",
+        "↑",
+        "↓",
+        "Add Enquiry Stage",
+        "Add Enquiry Type",
+        "Add Enquiry Source",
+        "×",
+        "Sign In",
+        "Login as Admin",
+        "Login as Staff",
+        "Login as Student",
+        "Login as Guardian",
+        "Latest Updates",
+        "Online Payment",
+        "Job Application",
+        "TC Verification"
+      ],
+      "inputTypeCounts": {
+        "text": 43,
+        "textarea": 7,
+        "checkbox": 26,
+        "number": 5,
+        "password": 19
+      },
+      "loginWallCount": 19
+    },
+    "pages": [
+      {
+        "route": "/app/reception/config/enquiry-stage/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Add Enquiry Stage"
+        ],
+        "labels": [
+          "Name",
+          "Color",
+          "Description",
+          "Keep Adding"
+        ],
+        "buttons": [
+          "Pinned Sidebar",
+          "Open Mobile Sidebar",
+          "Open options",
+          "List all Enquiry Stage",
+          "Reset",
+          "Cancel",
+          "Save"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "name",
+            "id": "b9b4b23e71e29",
+            "placeholder": "Name",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "color",
+            "id": "ac28e06630b4b",
+            "placeholder": "Color",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "textarea",
+            "type": "",
+            "name": "description",
+            "id": "ef52f1f5bdeb7",
+            "placeholder": "Description",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "keepAdding",
+            "id": "cf01ace731824",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/reception/config/enquiry-stage/create",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/enquiry-type/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Add Enquiry Type"
+        ],
+        "labels": [
+          "Name",
+          "Color",
+          "Description",
+          "Keep Adding"
+        ],
+        "buttons": [
+          "Pinned Sidebar",
+          "Open Mobile Sidebar",
+          "Open options",
+          "List all Enquiry Type",
+          "Reset",
+          "Cancel",
+          "Save"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "name",
+            "id": "ab95f3a059dd8",
+            "placeholder": "Name",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "color",
+            "id": "d1d0562920d238",
+            "placeholder": "Color",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "textarea",
+            "type": "",
+            "name": "description",
+            "id": "11b8a913599368",
+            "placeholder": "Description",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "keepAdding",
+            "id": "9f9e81beac159",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/reception/config/enquiry-type/create",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/enquiry-source/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Add Enquiry Source"
+        ],
+        "labels": [
+          "Name",
+          "Color",
+          "Description",
+          "Keep Adding"
+        ],
+        "buttons": [
+          "Pinned Sidebar",
+          "Open Mobile Sidebar",
+          "Open options",
+          "List all Enquiry Source",
+          "Reset",
+          "Cancel",
+          "Save"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "name",
+            "id": "e18427362647a",
+            "placeholder": "Name",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "color",
+            "id": "40aa4c0d487ab8",
+            "placeholder": "Color",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "textarea",
+            "type": "",
+            "name": "description",
+            "id": "370a776fc8ebf8",
+            "placeholder": "Description",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "keepAdding",
+            "id": "e11b3966b35268",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/reception/config/enquiry-source/create",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/visiting-purpose/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Add Visiting Purpose"
+        ],
+        "labels": [
+          "Name",
+          "Color",
+          "Description",
+          "Keep Adding"
+        ],
+        "buttons": [
+          "Pinned Sidebar",
+          "Open Mobile Sidebar",
+          "Open options",
+          "List all Visiting Purpose",
+          "Reset",
+          "Cancel",
+          "Save"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "name",
+            "id": "ff243492e1362",
+            "placeholder": "Name",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "color",
+            "id": "e27295fc02d9b",
+            "placeholder": "Color",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "textarea",
+            "type": "",
+            "name": "description",
+            "id": "f7eee059412758",
+            "placeholder": "Description",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "keepAdding",
+            "id": "6d86a1702748d8",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/reception/config/visiting-purpose/create",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/gate-pass-purpose/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Add Gate Pass Purpose"
+        ],
+        "labels": [
+          "Name",
+          "Color",
+          "Description",
+          "Keep Adding"
+        ],
+        "buttons": [
+          "Pinned Sidebar",
+          "Open Mobile Sidebar",
+          "Open options",
+          "List all Gate Pass Purpose",
+          "Reset",
+          "Cancel",
+          "Save"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "name",
+            "id": "d6f2d77d7aef2",
+            "placeholder": "Name",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "color",
+            "id": "98ef7165a8b278",
+            "placeholder": "Color",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "textarea",
+            "type": "",
+            "name": "description",
+            "id": "e0ba2e41847718",
+            "placeholder": "Description",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "keepAdding",
+            "id": "8beb3cf84147e",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/reception/config/gate-pass-purpose/create",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/complaint-type/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Add Complaint Type"
+        ],
+        "labels": [
+          "Name",
+          "Color",
+          "Description",
+          "Keep Adding"
+        ],
+        "buttons": [
+          "Pinned Sidebar",
+          "Open Mobile Sidebar",
+          "Open options",
+          "List all Complaint Type",
+          "Reset",
+          "Cancel",
+          "Save"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "name",
+            "id": "6b297e31c81cc8",
+            "placeholder": "Name",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "color",
+            "id": "74e3f713eea108",
+            "placeholder": "Color",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "textarea",
+            "type": "",
+            "name": "description",
+            "id": "fd905018a4432",
+            "placeholder": "Description",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "keepAdding",
+            "id": "c7cd9983bcf7a",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/reception/config/complaint-type/create",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/calling-purpose/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Add Calling Purpose"
+        ],
+        "labels": [
+          "Name",
+          "Color",
+          "Description",
+          "Keep Adding"
+        ],
+        "buttons": [
+          "Pinned Sidebar",
+          "Open Mobile Sidebar",
+          "Open options",
+          "List all Calling Purpose",
+          "Reset",
+          "Cancel",
+          "Save"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "name",
+            "id": "6e8052f9c82278",
+            "placeholder": "Name",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "color",
+            "id": "7a006b578d85",
+            "placeholder": "Color",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "textarea",
+            "type": "",
+            "name": "description",
+            "id": "41c4f57b7aeef",
+            "placeholder": "Description",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "keepAdding",
+            "id": "c4d89006a82418",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/reception/config/calling-purpose/create",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/enquiry-stage/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/config/enquiry-stage/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/enquiry-type/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/config/enquiry-type/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/enquiry-source/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/config/enquiry-source/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/visiting-purpose/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/config/visiting-purpose/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/gate-pass-purpose/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/config/gate-pass-purpose/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/complaint-type/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/config/complaint-type/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/calling-purpose/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/config/calling-purpose/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/general",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Config"
+        ],
+        "labels": [
+          "Enquiry Number Prefix",
+          "Enquiry Number Digit",
+          "Enquiry Number Suffix",
+          "Visitor Log Number Prefix",
+          "Visitor Log Number Digit",
+          "Visitor Log Number Suffix",
+          "Gate Pass Number Prefix",
+          "Gate Pass Number Digit",
+          "Gate Pass Number Suffix",
+          "Complaint Number Prefix",
+          "Complaint Number Digit",
+          "Complaint Number Suffix",
+          "Query Number Prefix",
+          "Query Number Digit",
+          "Query Number Suffix"
+        ],
+        "buttons": [
+          "Pinned Sidebar",
+          "Open Mobile Sidebar",
+          "Open options",
+          "Reset",
+          "Cancel",
+          "Save",
+          "↑",
+          "↓"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "enquiryNumberPrefix",
+            "id": "b29cacddd1de6",
+            "placeholder": "Enquiry Number Prefix",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "number",
+            "name": "enquiryNumberDigit",
+            "id": "82336c00030078",
+            "placeholder": "Enquiry Number Digit",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "enquiryNumberSuffix",
+            "id": "261ceb4af558e",
+            "placeholder": "Enquiry Number Suffix",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "visitorLogNumberPrefix",
+            "id": "26ca14f2c3d8f8",
+            "placeholder": "Visitor Log Number Prefix",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "number",
+            "name": "visitorLogNumberDigit",
+            "id": "2856f04f7434d8",
+            "placeholder": "Visitor Log Number Digit",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "visitorLogNumberSuffix",
+            "id": "6a8533ae2eb27",
+            "placeholder": "Visitor Log Number Suffix",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "gatePassNumberPrefix",
+            "id": "96db82a89a4f38",
+            "placeholder": "Gate Pass Number Prefix",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "number",
+            "name": "gatePassNumberDigit",
+            "id": "411bf9f28cdad8",
+            "placeholder": "Gate Pass Number Digit",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "gatePassNumberSuffix",
+            "id": "11cb7230eaa44",
+            "placeholder": "Gate Pass Number Suffix",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "complaintNumberPrefix",
+            "id": "63c6129a857b8",
+            "placeholder": "Complaint Number Prefix",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "number",
+            "name": "complaintNumberDigit",
+            "id": "12706d7cec042",
+            "placeholder": "Complaint Number Digit",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "complaintNumberSuffix",
+            "id": "ecff3d93956bd8",
+            "placeholder": "Complaint Number Suffix",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "queryNumberPrefix",
+            "id": "0bd35b61782588",
+            "placeholder": "Query Number Prefix",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "number",
+            "name": "queryNumberDigit",
+            "id": "e7bb73dbbf2388",
+            "placeholder": "Query Number Digit",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "queryNumberSuffix",
+            "id": "3d600d0b38155",
+            "placeholder": "Query Number Suffix",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/reception/config/general",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/enquiry-stage",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Enquiry Stage"
+        ],
+        "labels": [],
+        "buttons": [
+          "Pinned Sidebar",
+          "Open Mobile Sidebar",
+          "Open options",
+          "Add Enquiry Stage"
+        ],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/config/enquiry-stage",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/enquiry-type",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Enquiry Type"
+        ],
+        "labels": [],
+        "buttons": [
+          "Pinned Sidebar",
+          "Open Mobile Sidebar",
+          "Open options",
+          "Add Enquiry Type"
+        ],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/config/enquiry-type",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/enquiry-source",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Enquiry Source"
+        ],
+        "labels": [],
+        "buttons": [
+          "Pinned Sidebar",
+          "Open Mobile Sidebar",
+          "Open options",
+          "Add Enquiry Source",
+          "×"
+        ],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/config/enquiry-source",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config/visiting-purpose",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "×"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "22e6bd7ad95208",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "4c4a34f44c019",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "8e4065493dfb28",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/config/visiting-purpose",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/config/gate-pass-purpose",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "×"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "3d0d8fd8a72e8",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "96107fe00a8838",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "643fc86b37f9d",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/config/gate-pass-purpose",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/config/complaint-type",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification",
+          "×"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "62a552c75de7",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "3035ff24af8458",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "022f12d73b9fc",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/config/complaint-type",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/config/calling-purpose",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "3803768b0edf6",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "55be96a5059cf",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "bd0ec542550468",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/config/calling-purpose",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/enquiries/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "451ae98c50a838",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "3e505340f13c78",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "09ccd3e217135",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/enquiries/create",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/visitor-logs/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "304db087fbae2",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "c94969a0c867d8",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "95f1c9edf3ca4",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/visitor-logs/create",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/gate-passes/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "5bdbf93a75fdf",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "8567895c62516",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "2bf47005d06df8",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/gate-passes/create",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/complaints/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "370963201e888",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "88cec2089eb09",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "a7ccfb2bf00188",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/complaints/create",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/call-logs/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "abf3f8d9288d38",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "168a036c5a679",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "242b962239f878",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/call-logs/create",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/correspondences/create",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "6ec7c5c4065d58",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "3fe1054d78da4",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "d8d041ef8e39d",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/correspondences/create",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/enquiries/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/enquiries/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/enquiries/:uuid/wizard",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/enquiries/:uuid/wizard",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/enquiries/:uuid/duplicate",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/enquiries/:uuid/duplicate",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/visitor-logs/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/visitor-logs/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/visitor-logs/:uuid/duplicate",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/visitor-logs/:uuid/duplicate",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/gate-passes/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/gate-passes/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/gate-passes/:uuid/duplicate",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/gate-passes/:uuid/duplicate",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/complaints/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/complaints/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/complaints/:uuid/duplicate",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/complaints/:uuid/duplicate",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/call-logs/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/call-logs/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/call-logs/:uuid/duplicate",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/call-logs/:uuid/duplicate",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/correspondences/:uuid/edit",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/correspondences/:uuid/edit",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/correspondences/:uuid/duplicate",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/correspondences/:uuid/duplicate",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/enquiries/:uuid",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/enquiries/:uuid",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/visitor-logs/:uuid",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/visitor-logs/:uuid",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/gate-passes/:uuid",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/gate-passes/:uuid",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/complaints/:uuid",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/complaints/:uuid",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/call-logs/:uuid",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/call-logs/:uuid",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/correspondences/:uuid",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/correspondences/:uuid",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/queries/:uuid",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Page not found!"
+        ],
+        "labels": [],
+        "buttons": [],
+        "inputDetails": [],
+        "url": "https://demo.instikit.com/app/reception/queries/:uuid",
+        "hasLoginWall": false
+      },
+      {
+        "route": "/app/reception/config",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "943c63abaab4a8",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "40ad7bfeadbaa8",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "7618336b4a10d",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/config/general",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/enquiries",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "1da3d6727b0be",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "a13982f549d448",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "d4183463048b7",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/enquiries",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/visitor-logs",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "a097b2a5ad7e6",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "f9dfcb2d7857a8",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "7a9e7644d1038",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/visitor-logs",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/gate-passes",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "cadf23d41b9918",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "65579b1e2bd4f",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "a7fe3f62f3fa6",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/gate-passes",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/complaints",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "2339f935c08ba",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "07039f8d818078",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "905ed68aaa4808",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/complaints",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/call-logs",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "48b5be86fe6548",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "9fab36fa62d5f",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "0c3d779470394",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/call-logs",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/correspondences",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "a6d7d6c55c5b7",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "e0b883e162674",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "14c5c3c515b47",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/correspondences",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception/queries",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "53d40e912348f",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "3836cb15d7344",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "7bc393ae4256a",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/queries",
+        "hasLoginWall": true
+      },
+      {
+        "route": "/app/reception",
+        "title": "InstiKit School ERP",
+        "headings": [
+          "Sign In"
+        ],
+        "labels": [
+          "Email or Username",
+          "Password",
+          "Remember Me"
+        ],
+        "buttons": [
+          "Sign In",
+          "Login as Admin",
+          "Login as Staff",
+          "Login as Student",
+          "Login as Guardian",
+          "Latest Updates",
+          "Online Payment",
+          "Job Application",
+          "TC Verification"
+        ],
+        "inputDetails": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "id": "16b48a0e6c6fe",
+            "placeholder": "Email or Username",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "id": "38389a8b55b2f",
+            "placeholder": "Password",
+            "required": false,
+            "options": []
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "rememberMe",
+            "id": "0948e211793cc8",
+            "placeholder": "",
+            "required": false,
+            "options": []
+          }
+        ],
+        "url": "https://demo.instikit.com/app/login?ref=/reception/correspondences",
+        "hasLoginWall": true
+      }
+    ]
+  }
+}
